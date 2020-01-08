@@ -1,3 +1,4 @@
 /.idea
 /venv
-google-analytics-reporting/private.json
+/google-analytics-reporting/private.json
+/google-analytics-reporting/result.json

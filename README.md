@@ -1,3 +1,3 @@
 # Common Serverless
 
-无服务器函数应用库
+Common serverless function templates for cloud platforms
