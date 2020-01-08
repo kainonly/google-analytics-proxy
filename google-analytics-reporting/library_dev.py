@@ -30,6 +30,7 @@ query = {
             {'startDate': 'today', 'endDate': 'today'}
         ],
         'metrics': [
+            {'expression': 'ga:users'},
             {'expression': 'ga:sessions'}
         ],
         'dimensions': [
