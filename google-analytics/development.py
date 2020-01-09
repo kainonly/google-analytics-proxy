@@ -1,7 +1,7 @@
 from apiclient import discovery
 from oauth2client import service_account
-import os
 import httplib2
+import os
 
 SCOPES = ['https://www.googleapis.com/auth/analytics.readonly']
 KEY_FILE_LOCATION = 'private.json'

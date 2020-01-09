@@ -16,5 +16,5 @@ client = discovery.build(
 )
 
 
-def reports(query) -> dict:
+def reports(query: dict) -> dict:
     return client.reports().batchGet(body=query).execute()
