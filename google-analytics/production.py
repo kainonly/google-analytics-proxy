@@ -28,7 +28,7 @@ if platform == 'aliyun':
     subprocess.run(['pip', 'install', '-r', 'requirements.txt', '-t', 'dist/aliyun'])
 
 if platform == 'tencent':
-    shutil.copyfile('tencent.py', factoryPath('index.py'))
+    shutil.copyfile('tencent.py', factoryPath('api_service.py'))
     shutil.copyfile('reporting.py', factoryPath('reporting.py'))
     shutil.copyfile('private.json', factoryPath('private.json'))
     subprocess.run(['pip', 'install', '-r', 'requirements.txt', '-t', 'dist/tencent'])
