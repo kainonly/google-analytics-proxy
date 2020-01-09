@@ -14,3 +14,7 @@ client = discovery.build(
     version='v4',
     credentials=credentials
 )
+
+
+def reports(query) -> dict:
+    return client.reports().batchGet(body=query).execute()
