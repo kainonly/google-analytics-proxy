@@ -6,7 +6,7 @@ import os
 ARGS = sys.argv
 
 if len(ARGS) < 2:
-    exit('请设置无服务函数生成平台商!')
+    exit('Please set serverless platform provider!')
 
 platform = ARGS[1]
 
@@ -22,13 +22,13 @@ def factoryPath(path: str) -> str:
 
 
 if platform == 'aliyun':
-    shutil.copyfile('aliyun.py', factoryPath('index.py'))
+    shutil.copyfile('platform/aliyun.py', factoryPath('index.py'))
     shutil.copyfile('reporting.py', factoryPath('reporting.py'))
     shutil.copyfile('private.json', factoryPath('private.json'))
     subprocess.run(['pip', 'install', '-r', 'requirements.txt', '-t', 'dist/aliyun'])
 
 if platform == 'tencent':
-    shutil.copyfile('tencent.py', factoryPath('api_service.py'))
+    shutil.copyfile('platform/tencent.py', factoryPath('api_service.py'))
     shutil.copyfile('reporting.py', factoryPath('reporting.py'))
     shutil.copyfile('private.json', factoryPath('private.json'))
     subprocess.run(['pip', 'install', '-r', 'requirements.txt', '-t', 'dist/tencent'])
